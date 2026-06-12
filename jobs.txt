@@ -1,0 +1,162 @@
+How Engineers Check Jobs
+
+
+| Type              | Command            |
+| ----------------- | ------------------ |
+| Shell/Python/Java | `ps -ef`           |
+| Live monitoring   | `top`              |
+| Scheduled jobs    | `crontab -l`       |
+| Docker jobs       | `docker ps`        |
+| K8s jobs          | `kubectl get pods` |
+| Jenkins jobs      | Jenkins UI         |
+
+
+Real-Time Example
+
+Suppose company has:
+
+| Job                 | Technology        |
+| ------------------- | ----------------- |
+| Daily DB backup     | `.sh`             |
+| ETL pipeline        | `.py`             |
+| Banking application | `.jar`            |
+| Deployment pipeline | Jenkins           |
+| Data processing     | Spark             |
+| Microservice        | Docker/Kubernetes |
+
+
+
+
+Common Types of Jobs
+
+1. Shell Script Job (.sh)
+
+Example:
+
+backup.sh
+
+Run:
+
+sh backup.sh
+
+Use case:
+
+Backup
+File movement
+Cleanup
+Deployment automation
+
+Check running:
+
+ps -ef | grep backup.sh
+
+
+
+2. Python Job (.py)
+
+Example:
+
+etl.py
+
+Run:
+
+python etl.py
+
+Use case:
+
+Data engineering
+ETL pipelines
+API automation
+Data processing
+
+Check:
+
+ps -ef | grep python
+
+
+
+3. Java Job (.jar)
+
+Example:
+
+app.jar
+
+Run:
+
+java -jar app.jar
+
+Use case:
+
+Spring Boot applications
+Microservices
+Enterprise applications
+
+Check:
+
+ps -ef | grep java
+
+
+
+4. Cron Job
+
+Automatic scheduled jobs.
+
+Example:
+
+0 2 * * * sh backup.sh
+
+Meaning:
+
+Run daily at 2 AM
+
+Check:
+
+crontab -l
+
+
+
+
+5. Jenkins Job
+
+CI/CD pipeline jobs.
+
+Examples:
+
+Build project
+Run tests
+Deploy application
+
+Triggered:
+
+Automatically from Git push
+Manual execution
+Scheduler
+
+
+
+6. Spark Job
+
+Big data processing.
+
+Example:
+
+spark-submit etl.py
+
+Use case:
+
+Process TBs of data
+Data pipelines
+
+
+
+
+7. Docker Container as Job
+
+Example:
+
+docker run myapp
+
+Check:
+
+docker ps
+
